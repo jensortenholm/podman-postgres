@@ -7,7 +7,7 @@ FROM docker.io/centos:8
 ENV HOME=/var/lib/pgsql/data \
     POSTGRES_PWD="postgres"
 
-RUN dnf -y install postgresql-server nss_wrapper \
+RUN dnf -y install postgresql-server postgresql-contrib nss_wrapper \
     && dnf -y clean all \
     && mkdir -p /var/lib/pgsql/data \
     && mkdir -p /var/run/postgresql \
