@@ -2,7 +2,7 @@
 #
 # podman run -d --read-only --name pg -e POSTGRES_PWD=mypassword localhost/postgres:latest
 
-FROM docker.io/centos:8
+FROM docker.io/almalinux:8
 
 ENV HOME=/var/lib/pgsql/data \
     POSTGRES_PWD="postgres"
